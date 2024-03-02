@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WallpaperBro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.6/font/bootstrap-icons.min.css">
+  <style>
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px;
+    }
+    #searchbar {
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flexitem {
+      margin: 10px;
+    }
+    @media (max-width: 768px) {
+      .image-container img {
+        max-width: calc(100% - 20px); /* Adjusting for margins */
+      }
+      .navbar-brand {
+        font-size: 24px; /* Adjusting font size for smaller screens */
+      }
+      .navbar-nav {
+        flex-direction: column; /* Aligning links vertically */
+        margin-top: 10px; /* Adding some space between links */
+      }
+    }
+    .navbar-brand{
+      font-weight: bold;
+      color: blue;
+      font-size: 30px;
+    }
+    #category{
+      font-weight: bold;
+      font-size: 50px;
+      color: blue;
+    }
+    #dclick{
+      font-size: 50px;
+      color: blue;
+      
+    }
+    /* Sticky navbar */
+    .sticky-top {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+      width: 100%;
+    }
+    #footertext{
+      margin-left: 38%;
+    }
+    #flogo{
+      font-weight: bold;
+      font-size: 30px;
+    }
+    @media (max-width: 768px) {
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Adjust as necessary */
+  }
+  
+  .image-container img {
+    max-width: calc(50% - 5px); /* Adjust as necessary */
+  }
+}
+
+@media (max-width: 576px) {
+  .image-container img {
+    max-width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body class="bg-gradient">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 sticky-top">
+    <div class="container">
+      <a class="navbar-brand " href="#"><img src="./public/images/whitelogo-removebg-preview.png" height="50" width="80">wallpaperbro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Categories</a>
+          <a class="nav-link" href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="navbar bg-light">
+    <div class="container">
+      <form class="d-flex w-100 justify-content-center" role="search" id="searchbar">
+        <span class="bi bi-search"></span>
+        <input class="form-control me-2 border-primary text-center" type="search" placeholder='"search your desired image here"' aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container text-center mt-1">
+    <h1 id="category">Vintage</h1>
+  </div>
+
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 text-center">
+      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 1"></div>
+      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 2"></div>
+      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 3"></div>
+      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 4"></div>
+      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 5"></div>
+      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 6"></div>
+    </div>
+  </div>
+  
+
+  
+  
+  <div class="container text-center mt-5">
+    <h1 id="category">Message Us</h1>
+    <p>What images you want send us a message</p>
+  </div>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8"> <!-- Adjusting column width for different screen sizes -->
+        <div class="container-fluid">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Your Email address</label>
+            <input type="email" class="form-control border-1 border-primary" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+            <textarea class="form-control border-1 border-primary" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mb-3">Send Message</button> <!-- Adjusting margin bottom -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="conatiner text-center mt-4">
+    <img src="./public/images/thnksbro-removebg-preview.png" class="img-fluid">
+  </div>
+  
+
+
+  
+  <div class="card text-center bg-dark mt-5 p-4">
+    <div class="container">
+      <div class="row justify-content-center align-items-center"> <!-- Centering content horizontally and vertically -->
+        <div class="col-lg-3 col-md-6 col-sm-12"> <!-- Adjusting column width for different screen sizes -->
+          <div class="text-primary" id="flogo"> <!-- Adjusting text color -->
+            <h5 class="mt-5">wallapperbro</h5> <!-- Adjusting margin top -->
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12"> <!-- Adjusting column width for different screen sizes -->
+          <div class="card-body"> <!-- Removing unnecessary class (m-3) -->
+            <a href="#" class="text-light">About</a><br>
+            <a href="#" class="text-light">Categories</a><br>
+            <a href="#" class="text-light">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-light mt-3"> <!-- Adding margin top -->
+      AllRightsReserved@2024.wallpaperbro <!-- Fixed typo -->
+    </div>
+  </div>
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
