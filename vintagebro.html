@@ -7,12 +7,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.6/font/bootstrap-icons.min.css">
   <style>
-    .image-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
     .image-container img {
       max-width: 100%;
       height: auto;
@@ -22,42 +16,11 @@
       margin: 20px auto;
       max-width: 600px;
     }
-    .flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .flexitem {
-      margin: 10px;
-    }
-    @media (max-width: 768px) {
-      .image-container img {
-        max-width: calc(100% - 20px); /* Adjusting for margins */
-      }
-      .navbar-brand {
-        font-size: 24px; /* Adjusting font size for smaller screens */
-      }
-      .navbar-nav {
-        flex-direction: column; /* Aligning links vertically */
-        margin-top: 10px; /* Adding some space between links */
-      }
-    }
-    .navbar-brand{
+    .navbar-brand {
       font-weight: bold;
       color: blue;
       font-size: 30px;
     }
-    #category{
-      font-weight: bold;
-      font-size: 50px;
-      color: blue;
-    }
-    #dclick{
-      font-size: 50px;
-      color: blue;
-      
-    }
-    /* Sticky navbar */
     .sticky-top {
       position: -webkit-sticky;
       position: sticky;
@@ -65,44 +28,31 @@
       z-index: 1020;
       width: 100%;
     }
-    #footertext{
-      margin-left: 38%;
-    }
-    #flogo{
-      font-weight: bold;
-      font-size: 30px;
-    }
     @media (max-width: 768px) {
-  .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px; /* Adjust as necessary */
-  }
-  
-  .image-container img {
-    max-width: calc(50% - 5px); /* Adjust as necessary */
-  }
-}
-
-@media (max-width: 576px) {
-  .image-container img {
-    max-width: 100%;
-  }
-}
-
+      .image-container img {
+        max-width: calc(50% - 20px);
+      }
+      .navbar-brand {
+        font-size: 24px;
+      }
+    }
+    @media (max-width: 576px) {
+      .image-container img {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body class="bg-gradient">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 sticky-top">
     <div class="container">
-      <a class="navbar-brand " href="#"><img src="./public/images/whitelogo-removebg-preview.png" height="50" width="80">wallpaperbro</a>
+      <a class="navbar-brand" href="#"><img src="./public/images/whitelogo-removebg-preview.png" height="50" width="80" alt="WallpaperBro"> WallpaperBro</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           <a class="nav-link" href="#">About</a>
           <a class="nav-link" href="#">Categories</a>
           <a class="nav-link" href="#">Contact</a>
@@ -111,35 +61,47 @@
     </div>
   </nav>
 
+
   <nav class="navbar bg-light">
     <div class="container">
-      <form class="d-flex w-100 justify-content-center" role="search" id="searchbar">
+      <form class="d-flex w-100 justify-content-center" role="search" id="searchbar" onsubmit="event.preventDefault(); search();">
         <span class="bi bi-search"></span>
-        <input class="form-control me-2 border-primary text-center" type="search" placeholder='"search your desired image here"' aria-label="Search">
+        <input class="form-control me-2 border-primary text-center" type="search" id="searchInput" placeholder='"search your desired image here"' aria-label="Search">
         <button class="btn btn-outline-primary" type="submit">Search</button>
       </form>
     </div>
   </nav>
 
   <div class="container text-center mt-1">
-    <h1 id="category">Vintage</h1>
+    <h1 id="category">Movies</h1>
   </div>
 
+  <div class="container" id="imageContainer">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+      <!-- Your image elements -->
+      <!-- Example: -->
+      <div class="col"><img src="./public/images/pk1.jpg" alt="pawan" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/prabas2.jpg" alt="prabas" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/jahnavi1.jpg" alt="jahnavi" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/ntr2.jpg" alt="ntr" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/viswak1.jpg" alt="Movie 5" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/rc1.jpg" alt="r" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/ntr1.jpg" alt="ntr" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/pk2.jpg" alt="pawan" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/ntr3.jpg" alt="pawan" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/blackgami.jpg" alt="pawan" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/prabas4.jpg" alt="pawan" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/pk2.jpg" alt="pawan" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/prabas3.jpg" alt="pawan" class="img-fluid"></div>
+      <div class="col"><img src="./public/images/pk2.jpg" alt="pawan" class="img-fluid"></div>
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 text-center">
-      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 1"></div>
-      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 2"></div>
-      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 3"></div>
-      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 4"></div>
-      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 5"></div>
-      <div class="col mb-4"><img src="./public/images/bro2.jpg" class="img-fluid" alt="Image 6"></div>
+
+      <!-- Add more images as needed -->
     </div>
   </div>
-  
 
-  
-  
+
+
   <div class="container text-center mt-5">
     <h1 id="category">Message Us</h1>
     <p>What images you want send us a message</p>
@@ -191,7 +153,24 @@
       AllRightsReserved@2024.wallpaperbro <!-- Fixed typo -->
     </div>
   </div>
- 
+
+
+  <script>
+    function search() {
+      let input = document.getElementById('searchInput').value.toUpperCase();
+      let container = document.getElementById('imageContainer');
+      let images = container.getElementsByTagName('img');
+
+      for (let i = 0; i < images.length; i++) {
+        let altText = images[i].alt.toUpperCase();
+        if (altText.indexOf(input) > -1) {
+          images[i].parentElement.style.display = "";
+        } else {
+          images[i].parentElement.style.display = "none";
+        }
+      }
+    }
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
