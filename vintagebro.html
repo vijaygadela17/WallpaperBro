@@ -41,36 +41,40 @@
         max-width: 100%;
       }
     }
+    .custom-navbar {
+    box-shadow: 0px 12px 20px rgba(61, 61, 236, 0.967); /* Customize the shadow as per your need */
+  }
+ 
+  body {
+    /* Gradient from left to right and right to left */
+    background: linear-gradient(to right, #596ae9 -52%, #ffffff 70%), linear-gradient(to left,  #675be8 -52%, #ffffff 70%);
+    background-position: left, right; /* Positioning for both gradients */
+    background-repeat: no-repeat; /* Prevent gradient repetition */
+    background-size: 50%, 50%; /* Adjust size of each gradient */
+}
+
+
+
+
   </style>
 </head>
-<body class="bg-gradient">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 sticky-top">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 sticky-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="./public/images/whitelogo-removebg-preview.png" height="50" width="80" alt="WallpaperBro"> WallpaperBro</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          <a class="nav-link" href="#">About</a>
-          <a class="nav-link" href="#">Categories</a>
-          <a class="nav-link" href="#">Contact</a>
+        <a class="navbar-brand" href="#"><img src="./public/images/whitelogo-removebg-preview.png" height="45" width="80"><span class="font-arial">WallpaperBro</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="category">Categories</a>
+                <a class="nav-link" href="#">Contact</a>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
-
-
-  <nav class="navbar bg-light">
-    <div class="container">
-      <form class="d-flex w-100 justify-content-center" role="search" id="searchbar" onsubmit="event.preventDefault(); search();">
-        <span class="bi bi-search"></span>
-        <input class="form-control me-2 border-primary text-center" type="search" id="searchInput" placeholder='"search your desired image here"' aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
+</nav>
 
   <div class="container text-center mt-1">
     <h1 id="category">Vintage</h1>
