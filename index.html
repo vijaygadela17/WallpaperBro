@@ -260,6 +260,11 @@
     background-repeat: no-repeat; /* Prevent gradient repetition */
     background-size: 50%, 50%; /* Adjust size of each gradient */
 }
+#contact{
+  font-weight: bold;
+  color: blue;
+  font-size: 30px;
+}
 
 
 
@@ -277,8 +282,8 @@
             <div class="navbar-nav ms-auto">
                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 <a class="nav-link" href="#">About</a>
-                <a class="nav-link" href="category">Categories</a>
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#" onclick="scrollToCategory()">Categories</a>
+                <a class="nav-link" href="#" onclick="scrollToContact()">Contact</a>
             </div>
         </div>
     </div>
@@ -700,24 +705,26 @@
   </div>
 
   <div class="container text-center mt-5">
-    <h1 id="category">Message Us</h1>
+    <h1 id="contact">Message Us</h1>
     <p>What images you want send us a message</p>
   </div>
 
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-8">
-        <div class="container-fluid">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Your Email address</label>
-            <input type="email" class="form-control border-1 border-primary" id="exampleFormControlInput1" placeholder="name@example.com">
+          <div class="container-fluid">
+            <form method="post" action="" name="contact-form">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Your Email address</label>
+                <input type="email" class="form-control border-1 border-primary" name="Email" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+                <textarea class="form-control border-1 border-primary" name="Message" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="submit" id="submit" value="Submit" class="btn btn-primary w-100 mb-3">Send Message</button>
+            </form>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
-            <textarea class="form-control border-1 border-primary" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100 mb-3">Send Message</button>
-        </div>
       </div>
     </div>
   </div>
@@ -755,6 +762,44 @@
             image.style.zIndex = zIndex;
         });
     };
+    function scrollToCategory() {
+      const targetId = "category"; // Set the target ID
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const offset = targetElement.offsetTop;
+        window.scroll({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
+    }
+    function scrollToContact() {
+      const targetId = "contact"; // Set the target ID
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const offset = targetElement.offsetTop;
+        window.scroll({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwZUESeeuKOjbUsU1K-T4tgpqxJCRZYW316Dc6h6xcPaTd3jVoh4XE83fiXnOCrNWzh/exec'
+      
+    const form = document.forms['contact-form']
+      
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thank you! your form is submitted successfully." ))
+      .then(() => { window.location.reload(); })
+      .catch(error => console.error('Error!', error.message))
+    })
+
+
+
+
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
