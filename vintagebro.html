@@ -56,14 +56,27 @@
   #copyright{
     color: gray;
   }
+  .marquee-container {
+  width: 100%;
+  overflow: hidden;
+}
 
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 200s linear infinite; /* Adjust the duration (e.g., 20s) for speed control */
+}
 
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black p-2 sticky-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="./public/images/updatedwhitelogo.png" height="55" width="300"><span class="font-arial"></span></a>
+      <a class="navbar-brand" href="#"><img src="./public/images/updatedwhitelogo.png" height="55px" width="268px"><span class="font-arial"></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,9 +90,9 @@
         </div>
     </div>
   </nav>
-
   <nav class="navbar bg-light">
     <div class="container">
+      <marquee>💙💙Need to update the images💙💙</marquee>
       <form class="d-flex w-100 justify-content-center" role="search" id="searchbar" onsubmit="event.preventDefault(); search();">
         <span class="bi bi-search"></span>
         <input class="form-control me-2 border-primary border-2 text-center" type="search" id="searchInput" placeholder='"search your desired image here"' aria-label="Search">
