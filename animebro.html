@@ -56,14 +56,34 @@
   #copyright{
     color: gray;
   }
+  .image-wrapper {
+    position: relative;
+  }
 
+  .downloadButton {
+      position: absolute;
+      bottom: 70px; /* Adjust button position */
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 16px;
+      background-color: rgba(0, 4, 251, 0.5);
+      color: rgb(254, 255, 255);
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+  }
+
+  .image-wrapper:hover .downloadButton {
+      opacity: 1;
+  }
 
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black p-3 sticky-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="./public/images/updatedwhitelogo.png" height="55" width="300"><span class="font-arial"></span></a>
+      <a class="navbar-brand" href="#"><img src="./public/images/updatedwhitelogo.png" height="55px" width="262px"><span class="font-arial"></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -97,129 +117,128 @@
   <div class="container" id="imageContainer">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
       <!-- Your image elements -->
-      <!-- Example: -->
-        <div class="col">      <img src="./public/images/Anime\solo leveling manwa.png"                                     class="img-fluid" > </div>                                                                      
-        <div class="col">      <img src="./public/images/Anime\solo leveling-1.jpg"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-2.png"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-3.jpg"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-5.jpg"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-6.png"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-7.jpg"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-8.png"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-9.png"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-10.png"                                        class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-11.png"                                        class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-12.jpg"                                        class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\solo leveling-13.jpg"                                        class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\men-women-embrace-sunset-generative-ai.jpg"                  class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\spider-man-overlooking-nyc-mx.jpg"                           class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\wallpaperflare.com_wallpaper (1).jpg"                        class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\wallpaperflare.com_wallpaper.jpg"                            class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\wallpaperflare.com_wallpaper (2).jpg"                        class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\dragon-ball-vegetto-uhd-8k-wallpaper.jpg"                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Gintama5.jpg"                                                class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Gintama6.jpg"                                                class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\gojo.jpg"                                                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\goku.jpg"                                                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Goku1.jpg"                                                   class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Goku2.png"                                                   class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Hinata.jpg"                                                  class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\itachi1.jpg"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\itachi2.jpg"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Jiren.jpg"                                                   class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk gojo megumi yuji.jpg"                                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk maki.jpg"                                                class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk megumi 2.jpg"                                            class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk megumi.jpg"                                              class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\goku-vegeta-piccolo-majin-buu-uhd-4k-wallpaper.jpg"          class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\dragon-ball-super-vegeta-portrait-uhd-4k-wallpaper.jpg"      class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\dragon-ball-z-super-saiyan-blue-goku.jpg"                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\dragon-ball-black-goku-uhd-8k-wallpaper.jpg"                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\dragon-ball-goku-super-saiyan-blue-artwork-4k-wallpaper.jpg" class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk megumi1.jpg"                                             class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk sukuna.jpg"                                              class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuji megumi nobara.jpg"                                  class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuji nobara megumi nanami geto.jpg"                      class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuji.jpg"                                                class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuta 3.jpg"                                              class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuta 4.jpg"                                              class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuta maki panda.jpg"                                     class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuta.jpg"                                                class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuta1.jpg"                                               class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk yuta2.jpg"                                               class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\JJK.jpg"                                                     class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk.png"                                                     class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk1.jpg"                                                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk2.jpg"                                                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk3.jpg"                                                    class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\jjk4.jpg"                                                    class="img-fluid" > </div>             
-        <div class="col">      <img src="./public/images/Anime\kakashi.jpg"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Madara.jpg"                                                  class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Naruto family 1.jpg"                                         class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\naruto family.jpg"                                           class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Naruto.jpg"                                                  class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\naruto_jiraya.jpg"                                           class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\naruto_jiraya1.jpg"                                          class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Naruto1.jpg"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Naruto2.jpg"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\naruto2.png"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Naruto4.jpg"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Naruto5.jpg"                                                 class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\obito1.jpg"                                                  class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\one piece.jpg"                                               class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\one piece1.jpg"                                              class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\Op.jpg"                                                      class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\op1.png"                                                     class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\op2.jpg"                                                     class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\op3.jpg"                                                     class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\op4.jpg"                                                     class="img-fluid" > </div>              
-        <div class="col">      <img src="./public/images/Anime\op5.jpg"                                                     class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\op6.png"                                                     class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Pokemon.png"                                                 class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\SaSuke itachi.jpg"                                           class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Demon slayer 4.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Demon slayer 3.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Demon slayer 2.png"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Demon slayer1.jpg"                                           class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\nezuko and tonjiro.jpg"                                      class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\tonjiro demon slayer.jpg"                                    class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Demon slayer.jpg"                                            class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\minato kushina.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Naruto family 2.jpg"                                         class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\spy x family 7.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\yor spy x family.png"                                        class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\spy x family 5.png"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\spy x family 4.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\anya spy x family 1.png"                                     class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\spy x family 3.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\spy x family 2.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\anya yor loid spy x family.jpg"                              class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\anya spy x family.png"                                       class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\spy x family 1.jpg"                                          class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\spy x family.jpg"                                            class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\solo leveling-14.jpg"                                        class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\uchiha and naruto family.jpg"                                class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Vegeta.jpg"                                                  class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Vegeta1.jpg"                                                 class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Your_name.png"                                               class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Your_name1.jpg"                                              class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\yuji.jpg"                                                    class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Akatski.jpg"                                                 class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Akatski1.jpg"                                                class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Anime_girl.jpg"                                              class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Anime1.jpg"                                                  class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\anime2.jpg"                                                  class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\ANime3.jpg"                                                  class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Anime4.jpg"                                                  class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Bleach.jpg"                                                  class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\bleach1.jpg"                                                 class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Boruto.jpg"                                                  class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Dragon ball.png"                                             class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Gintama.jpg"                                                 class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Gintama1.jpg"                                                class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Gintama3.jpg"                                                class="img-fluid" ></div>
-        <div class="col">      <img src="./public/images/Anime\Gintama4.jpg"                                                class="img-fluid" ></div>
-    </div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling manwa.png"                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>                                                                      
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-1.jpg"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-2.png"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-3.jpg"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-5.jpg"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-6.png"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-7.jpg"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-8.png"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-9.png"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-10.png"                                        class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-11.png"                                        class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-12.jpg"                                        class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-13.jpg"                                        class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\men-women-embrace-sunset-generative-ai.jpg"                  class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spider-man-overlooking-nyc-mx.jpg"                           class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\wallpaperflare.com_wallpaper (1).jpg"                        class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\wallpaperflare.com_wallpaper.jpg"                            class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\wallpaperflare.com_wallpaper (2).jpg"                        class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\dragon-ball-vegetto-uhd-8k-wallpaper.jpg"                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Gintama5.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Gintama6.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\gojo.jpg"                                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\goku.jpg"                                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Goku1.jpg"                                                   class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Goku2.png"                                                   class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Hinata.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\itachi1.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\itachi2.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Jiren.jpg"                                                   class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk gojo megumi yuji.jpg"                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk maki.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk megumi 2.jpg"                                            class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk megumi.jpg"                                              class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\goku-vegeta-piccolo-majin-buu-uhd-4k-wallpaper.jpg"          class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\dragon-ball-super-vegeta-portrait-uhd-4k-wallpaper.jpg"      class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\dragon-ball-z-super-saiyan-blue-goku.jpg"                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\dragon-ball-black-goku-uhd-8k-wallpaper.jpg"                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\dragon-ball-goku-super-saiyan-blue-artwork-4k-wallpaper.jpg" class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk megumi1.jpg"                                             class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk sukuna.jpg"                                              class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuji megumi nobara.jpg"                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuji nobara megumi nanami geto.jpg"                      class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuji.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuta 3.jpg"                                              class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuta 4.jpg"                                              class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuta maki panda.jpg"                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuta.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuta1.jpg"                                               class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk yuta2.jpg"                                               class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\JJK.jpg"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk.png"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk1.jpg"                                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk2.jpg"                                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk3.jpg"                                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\jjk4.jpg"                                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>             
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\kakashi.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Madara.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Naruto family 1.jpg"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\naruto family.jpg"                                           class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Naruto.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\naruto_jiraya.jpg"                                           class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\naruto_jiraya1.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Naruto1.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Naruto2.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\naruto2.png"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Naruto4.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Naruto5.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\obito1.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\one piece.jpg"                                               class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\one piece1.jpg"                                              class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Op.jpg"                                                      class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\op1.png"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\op2.jpg"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\op3.jpg"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\op4.jpg"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div> </div>              
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\op5.jpg"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\op6.png"                                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Pokemon.png"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\SaSuke itachi.jpg"                                           class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Demon slayer 4.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Demon slayer 3.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Demon slayer 2.png"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Demon slayer1.jpg"                                           class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\nezuko and tonjiro.jpg"                                      class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\tonjiro demon slayer.jpg"                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Demon slayer.jpg"                                            class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\minato kushina.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Naruto family 2.jpg"                                         class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spy x family 7.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\yor spy x family.png"                                        class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spy x family 5.png"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spy x family 4.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\anya spy x family 1.png"                                     class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spy x family 3.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spy x family 2.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\anya yor loid spy x family.jpg"                              class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\anya spy x family.png"                                       class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spy x family 1.jpg"                                          class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\spy x family.jpg"                                            class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\solo leveling-14.jpg"                                        class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\uchiha and naruto family.jpg"                                class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Vegeta.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Vegeta1.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Your_name.png"                                               class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Your_name1.jpg"                                              class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\yuji.jpg"                                                    class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Akatski.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Akatski1.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Anime_girl.jpg"                                              class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Anime1.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\anime2.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\ANime3.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Anime4.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Bleach.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\bleach1.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Boruto.jpg"                                                  class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Dragon ball.png"                                             class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Gintama.jpg"                                                 class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Gintama1.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Gintama3.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+        <div class="col"><div class="image-wrapper">      <img src="./public/images/Anime\Gintama4.jpg"                                                class="img-fluid" ><button class="downloadButton">Download Now</button></div></div>
+    </div></div>Download Now
   </div>
 
 
@@ -280,36 +299,54 @@
 
 
   <script>
+    // Search function
     function search() {
-      let input = document.getElementById('searchInput').value.toUpperCase();
-      let container = document.getElementById('imageContainer');
-      let images = container.getElementsByTagName('img');
+        let input = document.getElementById('searchInput').value.toUpperCase();
+        let container = document.getElementById('imageContainer');
+        let images = container.getElementsByTagName('img');
 
-      for (let i = 0; i < images.length; i++) {
-        let altText = images[i].alt.toUpperCase();
-        if (altText.indexOf(input) > -1) {
-          images[i].parentElement.style.display = "";
-        } else {
-          images[i].parentElement.style.display = "none";
+        for (let i = 0; i < images.length; i++) {
+            let altText = images[i].alt.toUpperCase();
+            if (altText.includes(input)) {
+                images[i].parentElement.parentElement.style.display = "";
+            } else {
+                images[i].parentElement.parentElement.style.display = "none";
+            }
         }
-      }
     }
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwZUESeeuKOjbUsU1K-T4tgpqxJCRZYW316Dc6h6xcPaTd3jVoh4XE83fiXnOCrNWzh/exec'
-      
-      const form = document.forms['contact-form']
-        
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Thank you! your form is submitted successfully." ))
-        .then(() => { window.location.reload(); })
-        .catch(error => console.error('Error!', error.message))
-      })
+    // Form submission
+    const form = document.forms['contact-form'];
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Thank you! Your form has been submitted successfully.");
+                    form.reset();
+                } else {
+                    alert("Oops! Something went wrong.");
+                }
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
 
-
+    // Download button functionality
+    const downloadButtons = document.querySelectorAll('.downloadButton');
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const image = button.previousElementSibling;
+            const link = document.createElement('a');
+            link.href = image.src;
+            link.download = 'image.jpg';
+            link.click();
+        });
+    });
   </script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js"></script>

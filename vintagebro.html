@@ -71,12 +71,37 @@
   0%   { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
+
+.image-wrapper {
+    position: relative;
+}
+
+.downloadButton {
+    position: absolute;
+    bottom: 70px; /* Adjust button position */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background-color: rgba(19, 8, 240, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-wrapper:hover .downloadButton {
+    opacity: 1;
+}
+
+
+
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black p-2 sticky-top custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="./public/images/updatedwhitelogo.png" height="55px" width="268px"><span class="font-arial"></span></a>
+      <a class="navbar-brand" href="#"><img src="./public/images/updatedwhitelogo.png" height="55px" width="262px"><span class="font-arial"></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -108,26 +133,14 @@
   </div>
 
   <div class="container" id="imageContainer">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-      <!-- Your image elements -->
-      <!-- Example: -->
-      <div class="col"><img src="./public/images/pk1.jpg" alt="pawan" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/prabas2.jpg" alt="prabas" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/jahnavi1.jpg" alt="jahnavi" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/ntr2.jpg" alt="ntr" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/viswak1.jpg" alt="Movie 5" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/rc1.jpg" alt="r" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/ntr1.jpg" alt="ntr" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/pk2.jpg" alt="pawan" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/ntr3.jpg" alt="pawan" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/blackgami.jpg" alt="pawan" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/prabas4.jpg" alt="pawan" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/pk2.jpg" alt="pawan" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/prabas3.jpg" alt="pawan" class="img-fluid"></div>
-      <div class="col"><img src="./public/images/pk2.jpg" alt="pawan" class="img-fluid"></div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4">
+      <div class="col"><div class="image-wrapper"><img src="./public/images/pk1.jpg" alt="Pawan" class="img-fluid"><button class="downloadButton">Download Image</button></div></div>
+      <div class="col"><div class="image-wrapper"><img src="./public/images/prabas2.jpg" alt="prabas" class="img-fluid"><button class="downloadButton">Download Image</button></div></div>
+      <div class="col"><div class="image-wrapper"><img src="./public/images/jahnavi1.jpg" alt="jahnavi" class="img-fluid"><button class="downloadButton">Download Image</button></div></div>
+      <div class="col"><div class="image-wrapper"><img src="./public/images/ntr2.jpg" alt="ntr" class="img-fluid"><button class="downloadButton">Download Image</button></div></div>
+      <div class="col"><div class="image-wrapper"><img src="./public/images/viswak1.jpg" alt="viswak" class="img-fluid"><button class="downloadButton">Download Image</button></div></div>
+      <div class="col"><div class="image-wrapper"><img src="./public/images/prabas2.jpg" alt="prabas" class="img-fluid"><button class="downloadButton">Download Image</button></div></div>
 
-
-      <!-- Add more images as needed -->
     </div>
   </div>
 
@@ -189,37 +202,54 @@
   </div>
 
   <script>
+    // Search function
     function search() {
-      let input = document.getElementById('searchInput').value.toUpperCase();
-      let container = document.getElementById('imageContainer');
-      let images = container.getElementsByTagName('img');
+        let input = document.getElementById('searchInput').value.toUpperCase();
+        let container = document.getElementById('imageContainer');
+        let images = container.getElementsByTagName('img');
 
-      for (let i = 0; i < images.length; i++) {
-        let altText = images[i].alt.toUpperCase();
-        if (altText.indexOf(input) > -1) {
-          images[i].parentElement.style.display = "";
-        } else {
-          images[i].parentElement.style.display = "none";
+        for (let i = 0; i < images.length; i++) {
+            let altText = images[i].alt.toUpperCase();
+            if (altText.includes(input)) {
+                images[i].parentElement.parentElement.style.display = "";
+            } else {
+                images[i].parentElement.parentElement.style.display = "none";
+            }
         }
-      }
     }
 
-    
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwZUESeeuKOjbUsU1K-T4tgpqxJCRZYW316Dc6h6xcPaTd3jVoh4XE83fiXnOCrNWzh/exec'
-      
-    const form = document.forms['contact-form']
-      
+    // Form submission
+    const form = document.forms['contact-form'];
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => alert("Thank you! your form is submitted successfully." ))
-      .then(() => { window.location.reload(); })
-      .catch(error => console.error('Error!', error.message))
-    })
+        e.preventDefault();
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Thank you! Your form has been submitted successfully.");
+                    form.reset();
+                } else {
+                    alert("Oops! Something went wrong.");
+                }
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
 
-
-
-  </script>
+    // Download button functionality
+    const downloadButtons = document.querySelectorAll('.downloadButton');
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const image = button.previousElementSibling;
+            const link = document.createElement('a');
+            link.href = image.src;
+            link.download = 'image.jpg';
+            link.click();
+        });
+    });
+</script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
